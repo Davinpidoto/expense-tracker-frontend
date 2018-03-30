@@ -1,7 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="collapse navbar-collapse container" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <router-link tag="li" class="nav-item" to="/" exact><a class="nav-link">Expense Tracker</a></router-link>
+          <router-link tag="li" class="nav-item" to="/stats"><a class="nav-link">Stats</a></router-link>
+          <router-link tag="li" class="nav-item" to="/transactions"><a class="nav-link">Transactions</a></router-link>
+          <router-link tag="li" class="nav-item" to="/upload"><a class="nav-link">Upload Csv</a></router-link>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
@@ -12,12 +23,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../node_modules/open-iconic/font/css/open-iconic-bootstrap.css';
 </style>

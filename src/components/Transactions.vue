@@ -21,7 +21,7 @@
         <td>{{item.description}}</td>
         <td>
           <select v-model="item.expenseType" @change="changeLocation(item)">
-            <option v-for="thetype in types" :key="thetype.id" v-bind:value="thetype.type">{{thetype.type}}</option>
+            <option v-for="thetype in types" :key="thetype.id" v-bind:value="thetype.name">{{thetype.name}}</option>
           </select>
         </td>
         <td>{{item.amount}}</td>
@@ -39,8 +39,8 @@ export default {
     return {
       transactions: {},
       types: {},
-      from: '1/1/2018',
-      to: '31/12/2018'
+      from: '1/1/2019',
+      to: '31/12/2019'
     }
   },
   created: function () {
